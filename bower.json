@@ -1,0 +1,22 @@
+{
+  "name": "projeto",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "awesomemiind <spamawesomemiind@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/awesomemiind/projeto",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "materialize": "^1.0.0",
+    "fontAwesome": "fontawesome#^5.10.0"
+  }
+}

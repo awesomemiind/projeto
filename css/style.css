@@ -1,0 +1,14 @@
+/* CELULAR */
+@media (min-width:480px) {
+    .logincard {
+        width: 100vh;
+        height: 100vh;
+        background-color: purple;
+        
+    }
+}
+
+/* PC */
+@media (min-width:801px) {
+}
+
