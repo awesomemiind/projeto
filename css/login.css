@@ -50,6 +50,15 @@ div.icone p {
     margin-top: 40px;
     font-size: 30px;
     font-weight: bold;
+    display: block;
+}
+
+.msgerro {
+    color: red;
+    font-size: 20px;
+    width: 300px;
+    margin-top: 5%;
+    margin-left: -70%;  
 }
 
 div.icone i {
