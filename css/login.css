@@ -7,14 +7,22 @@ body {
     background: #b224ef;
 }
 
+.msgerro {
+    margin-top: 0;
+}
+
 .loginBody {
     margin-top: 220px;
 }
 }
 
 @media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-    .loginBody {
-        margin-top: 300px;
+.loginBody {
+    margin-top: 300px;
+}
+
+.msgerro {
+    margin-top: 10%;
 }
 
 }
@@ -57,7 +65,6 @@ div.icone p {
     color: red;
     font-size: 20px;
     width: 300px;
-    margin-top: 5%;
     margin-left: -70%;  
 }
 

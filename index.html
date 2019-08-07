@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_SESSION['id']) and isset($_SESSION['username']) and isset($_SESSION['nivel'])) {
+    header("Location: painel.html");
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,10 +12,12 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/fontAwesome/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <title>Login Painel</title>
 </head>
 <body>
@@ -24,7 +29,12 @@ session_start();
                         <div class="icone">
                                 <i class="fab fa-atlassian"></i>
                                 <p>LOG IN</p>
-                                <h2 class="msgerro">Login e/ou senha incorretos</h2>
+                                <?php
+                                    if (isset($_SESSION['msg'])) {
+                                        echo ("<h2 class='msgerro'>".$_SESSION['msg']."</h2>");
+                                        unset($_SESSION['msg']);
+                                    }
+                                ?>
                         </div>
                     </div>
                     <div class="loginBody">
@@ -33,13 +43,13 @@ session_start();
                                 <div class="container">
                                         <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input type="text" name="username" id="username" class="validate" autofocus>
+                                                    <input type="text" name="username" id="username" class="validate" onclick="apagaMsg()">
                                                     <label for="username" style="color: white"><i class="fas fa-user"></i> &nbsp; &nbsp; Username</label>
                                                 </div>
                                             </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="password" name="password" id="password" class="validate">
+                                                <input type="password" name="password" id="password" class="validate" onclick="apagaMsg()">
                                                 <label for="username" style="color: white"><i class="fas fa-lock"></i> &nbsp; &nbsp; Password</label>
                                             </div>
                                         </div>
@@ -75,8 +85,14 @@ function validaForm(frm) {
         M.toast({html: 'Por favor, preencha os campos corretamente.'})
         return false;
     }
+
+function apagaMsg() {
+    let msgErro = document.querySelector(".msgerro");
+    msgErro.innerHTML = ''; 
 }
-                    </script>
+}
+</script>
+<script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
