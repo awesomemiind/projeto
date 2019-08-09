@@ -3,16 +3,16 @@
       <div class="user-view">
       <div class="background">
       </div>
-        <a href="#user"><div class="circle"><i class="fas fa-user-ninja" style="font-size: 50px;"></i></div>
+        <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
         <a href="#name"><span class="white-text name">Marcelo Nascimento</span></a>
         <a href="#email"><span class="white-text email">marcelo.nascimento@gmail.com</span></a>
-      </div>
+      </div> 
     </li>
       <li><a href="#"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a href="#"><i class="fas fa-box-open side-icon"></i>Second Link</a></li>
+      <li><a href="assets/pages/produtos.html"><i class="fas fa-box-open side-icon"></i>Produtos</a></li>
       <li><div class="divider"></div></li>
       <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      <li><a class="waves-effect" href="#">Click</a></li>
     </ul>
     
 <header>
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Or with jQuery
 
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
 </script>

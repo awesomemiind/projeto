@@ -1,4 +1,3 @@
-function apagaMsg() {
-    let msgErro = document.querySelector(".msgerro");
-    msgErro.innerHTML = ''; 
+function closeSidenav() {
+    alert('teste')
 }
